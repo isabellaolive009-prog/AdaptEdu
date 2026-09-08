@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividades</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Atividades</h1>
+
+    <a href="/atividades/cadastrar">Cadastrar atividade</a>
+
+    {% for atividade in atividades %}
+
+        <h2>{{ atividade["titulo"] }}</h2>
+
+        <p>Disciplina: {{ atividade["disciplina"] }}</p>
+
+        <p>{{ atividade["descricao"] }}</p>
+
+        <a href="/atividades/editar/{{ atividade['id'] }}">Editar</a>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
