@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar atividade</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Cadastrar atividade</h1>
+
+    <form action="/atividades/cadastrar" method="POST">
+
+        <label>Título:</label>
+        <input type="text" name="titulo" required>
+
+        <label>Disciplina:</label>
+        <input type="text" name="disciplina" required>
+
+        <label>Descrição:</label>
+        <textarea name="descricao" required></textarea>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+
+</body>
+</html>
