@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AdaptEdu: recursos, estratégias e materiais para uma educação mais acessível e inclusiva.">
+  <title>{% block title %}AdaptEdu{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="{{ url_for('inicio') }}"><span class="brand-mark">A</span><span>Adapt<span class="brand-light">Edu</span><small>EDUCAÇÃO INCLUSIVA</small></span></a>
+  <nav class="main-nav">
+    {% if usuario_atual %}
+      <a href="{{ url_for('painel') }}">Explorar</a><a href="{{ url_for('meus_materiais') }}">Minhas publicações</a><a href="{{ url_for('ajuda') }}">Sobre inclusão</a>
+      <a class="nav-user" href="{{ url_for('painel') }}">{{ usuario_atual.nome.split()[0] }}</a><a class="nav-login" href="{{ url_for('sair') }}">Sair</a>
+    {% else %}
+      <a href="{{ url_for('inicio') }}#recursos">Recursos</a><a href="{{ url_for('ajuda') }}">Sobre o projeto</a><a href="{{ url_for('login') }}">Entrar</a><a class="nav-cta" href="{{ url_for('cadastro') }}">Criar conta</a>
+    {% endif %}
+  </nav>
+</header>
+{% with mensagens = get_flashed_messages(with_categories=true) %}{% if mensagens %}<div class="flash-wrap">{% for categoria, mensagem in mensagens %}<div class="flash {{ categoria }}">{{ mensagem }}</div>{% endfor %}</div>{% endif %}{% endwith %}
+{% block content %}{% endblock %}
+<footer class="site-footer"><div class="footer-brand"><span class="brand-mark">A</span><div><strong>AdaptEdu</strong><p>Compartilhando caminhos para uma educação acessível.</p></div></div><span>© 2026 AdaptEdu · Projeto de educação inclusiva</span></footer>
+</body></html>
