@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block title %}{{ codigo }} | AdaptEdu{% endblock %}{% block content %}<main class="empty-state error-state"><strong class="error-code">{{ codigo }}</strong><h1>Não foi possível acessar</h1><p>{{ mensagem }}</p><a class="button button-primary" href="{{ url_for('painel') if usuario_atual else url_for('inicio') }}">Voltar</a></main>{% endblock %}
