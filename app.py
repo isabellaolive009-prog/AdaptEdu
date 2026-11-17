@@ -3,7 +3,11 @@ from datetime import datetime
 from functools import wraps
 from urllib.parse import urlparse, parse_qs
 
+<<<<<<< HEAD
 from flask import Flask, render_template, request, redirect, url_for, flash, session, abort, send_from_directory
+=======
+from flask import Flask, render_template, request, redirect, url_for, flash, session, abort
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime, ForeignKey, inspect, or_
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker, scoped_session
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -147,6 +151,7 @@ def url_segura(url):
 def contexto_global():
     return {'usuario_atual': professor_logado(), 'video_embed': video_embed}
 
+<<<<<<< HEAD
 
 
 @app.route('/service-worker.js')
@@ -156,6 +161,8 @@ def service_worker():
     resposta.headers['Cache-Control'] = 'no-cache'
     return resposta
 
+=======
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
 @app.route('/')
 def inicio():
     destaques = db_session.query(Material).order_by(Material.criado_em.desc()).limit(3).all()

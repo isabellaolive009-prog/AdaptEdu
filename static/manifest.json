@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "id": "/",
   "name": "AdaptEdu - Educação Inclusiva",
   "short_name": "AdaptEdu",
@@ -29,4 +30,12 @@
       "purpose": "maskable"
     }
   ]
+=======
+    "name": "AdptEdu",
+    "short_name": "AdaptEdu",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff"
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
 }

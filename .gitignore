@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 __pycache__/
 *.py[cod]
 venv/
@@ -5,3 +6,11 @@ bellenv/
 .env
 static/uploads/*
 !static/uploads/.gitkeep
+=======
+venv/
+__pycache__/
+*.pyc
+.env
+instance/
+.DS_Store
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9

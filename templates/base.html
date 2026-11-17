@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AdaptEdu: recursos, estratégias e materiais para uma educação mais acessível e inclusiva.">
+<<<<<<< HEAD
   <meta name="theme-color" content="#173b70">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -10,6 +11,8 @@
   <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='icons/icon-192.png') }}">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/icon-192.png') }}">
+=======
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
   <title>{% block title %}AdaptEdu{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -17,21 +20,30 @@
   {% block head %}{% endblock %}
 </head>
 <body>
+<<<<<<< HEAD
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+=======
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
 <header class="site-header">
   <a class="brand" href="{{ url_for('inicio') }}"><span class="brand-mark">A</span><span>Adapt<span class="brand-light">Edu</span><small>EDUCAÇÃO INCLUSIVA</small></span></a>
   <nav class="main-nav">
     {% if usuario_atual %}
       <a href="{{ url_for('painel') }}">Explorar</a><a href="{{ url_for('meus_materiais') }}">Minhas publicações</a><a href="{{ url_for('ajuda') }}">Sobre inclusão</a>
       <a class="nav-user" href="{{ url_for('painel') }}">{{ usuario_atual.nome.split()[0] }}</a><a class="nav-login" href="{{ url_for('sair') }}">Sair</a>
+<<<<<<< HEAD
       <button class="install-button" id="install-app" type="button" hidden>Instalar app</button>
     {% else %}
       <a href="{{ url_for('inicio') }}#recursos">Recursos</a><a href="{{ url_for('ajuda') }}">Sobre o projeto</a><a href="{{ url_for('login') }}">Entrar</a><a class="nav-cta" href="{{ url_for('cadastro') }}">Criar conta</a>
       <button class="install-button" id="install-app" type="button" hidden>Instalar app</button>
+=======
+    {% else %}
+      <a href="{{ url_for('inicio') }}#recursos">Recursos</a><a href="{{ url_for('ajuda') }}">Sobre o projeto</a><a href="{{ url_for('login') }}">Entrar</a><a class="nav-cta" href="{{ url_for('cadastro') }}">Criar conta</a>
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
     {% endif %}
   </nav>
 </header>
 {% with mensagens = get_flashed_messages(with_categories=true) %}{% if mensagens %}<div class="flash-wrap">{% for categoria, mensagem in mensagens %}<div class="flash {{ categoria }}">{{ mensagem }}</div>{% endfor %}</div>{% endif %}{% endwith %}
+<<<<<<< HEAD
 <div id="conteudo">{% block content %}{% endblock %}</div>
 <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">A</span><div><strong>AdaptEdu</strong><p>Compartilhando caminhos para uma educação acessível.</p></div></div><span>© 2026 AdaptEdu · Projeto de educação inclusiva</span></footer>
 <script>
@@ -74,4 +86,8 @@
     if (botaoInstalar) botaoInstalar.hidden = true;
   });
 </script>
+=======
+{% block content %}{% endblock %}
+<footer class="site-footer"><div class="footer-brand"><span class="brand-mark">A</span><div><strong>AdaptEdu</strong><p>Compartilhando caminhos para uma educação acessível.</p></div></div><span>© 2026 AdaptEdu · Projeto de educação inclusiva</span></footer>
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
 </body></html>

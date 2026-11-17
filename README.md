@@ -50,6 +50,7 @@ O banco `banco.db` é mantido na pasta do projeto. Na primeira inicialização, 
 ## Antes de publicar na internet
 
 Defina uma `SECRET_KEY` forte por variável de ambiente, use HTTPS, configure proteção CSRF, política de privacidade e rotina de backup do banco. Revise os materiais e os links externos antes de disponibilizá-los publicamente. Não publique imagens ou dados que identifiquem estudantes sem autorização adequada.
+<<<<<<< HEAD
 
 
 ## Aplicativo no celular (PWA)
@@ -63,3 +64,5 @@ Para testar no computador, execute o Flask e abra `http://127.0.0.1:5000`.
 Para instalar em um celular, o aplicativo precisa estar publicado em um endereço HTTPS. No Android, abra o endereço no Chrome e escolha instalar/adicionar à tela inicial. No iPhone, abra no Safari, toque em Compartilhar e escolha Adicionar à Tela de Início.
 
 Observação: o modo offline não mantém login, formulários ou dados pessoais em cache. É necessário estar conectado à internet para consultar e publicar materiais.
+=======
+>>>>>>> c3516d7dcd18e8e0f38951830a33bac955f201c9
